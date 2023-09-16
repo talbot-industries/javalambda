@@ -8,7 +8,8 @@
     "stop": "docker compose down",
     "package": "mvn package",
     "deploy": "sls deploy",
-    "demo": "npm run package && npm restart && npm run deploy && ./test.sh"
+    "test": "./test.sh",
+    "demo": "npm run package && npm restart && npm run deploy && npm test"
   },
   "author": "",
   "license": "ISC",
