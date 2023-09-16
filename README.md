@@ -3,7 +3,6 @@
 ### Pre-reqs
 
 * AWS CLi tools
-* `awslocal`
 * Maven
 * Java 17
 * Node and NPM
@@ -13,3 +12,7 @@
 `npm install`
 
 `npm run demo`
+
+### Clean up
+
+`npm stop`
