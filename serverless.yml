@@ -1,0 +1,21 @@
+frameworkVersion: '3'
+
+plugins:
+  - serverless-localstack
+
+package:
+  artifact: target/javalambda-1.0-SNAPSHOT.jar
+
+provider:
+  name: aws
+  runtime: java17
+
+service: java-lambda-api-gateway-demo
+
+functions:
+  defaultHandler:
+    handler: com.talbotindustries.LambdaRequestHandler
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY

@@ -1,0 +1,19 @@
+{
+  "name": "java-lambda-api-gateway-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "docker compose up --build -d",
+    "stop": "docker compose down",
+    "package": "mvn package",
+    "deploy": "sls deploy",
+    "demo": "npm run package && npm restart && npm run deploy && ./test.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^3.35.0",
+    "serverless-localstack": "^1.1.1"
+  }
+}
